@@ -1,0 +1,4 @@
+name: SkLiteBans
+version: '${project.version}'
+main: org.maxhyperbeast.sklitebans.SkLiteBans
+api-version: '1.21'
