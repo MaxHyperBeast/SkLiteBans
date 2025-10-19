@@ -13,7 +13,7 @@ import org.maxhyperbeast.sklitebans.elements.events.EvtEntryAdded;
 public class CondEntryAffectsIP extends Condition {
 
     static {
-        Skript.registerCondition(CondEntryIsSilent.class, "%litebans entry% (1¦affects|2¦does(n't| not) affect) ip");
+        Skript.registerCondition(CondEntryIsSilent.class, "%litebansentry% affects ip", "%litebansentry does(n't| not) affect ip");
     }
     Expression<Entry> entry;
 
@@ -32,6 +32,7 @@ public class CondEntryAffectsIP extends Condition {
 
     @Override
     public boolean init(Expression<?>[] expressions, int i, Kleenean kleenean, SkriptParser.ParseResult parseResult) {
+        parseResult.
         entry = (Expression<Entry>) expressions[0];
         return true;
     }

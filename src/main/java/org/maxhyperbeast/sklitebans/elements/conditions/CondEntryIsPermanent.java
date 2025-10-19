@@ -13,7 +13,7 @@ import org.maxhyperbeast.sklitebans.elements.events.EvtEntryAdded;
 public class CondEntryIsPermanent extends Condition {
 
     static {
-        Skript.registerCondition(CondEntryIsSilent.class, "%litebans entry% (1¦is|2¦is(n't| not)) permanent");
+        Skript.registerCondition(CondEntryIsSilent.class, "%litebansentry% (1¦is|2¦is(n't| not)) permanent");
     }
     Expression<Entry> entry;
 

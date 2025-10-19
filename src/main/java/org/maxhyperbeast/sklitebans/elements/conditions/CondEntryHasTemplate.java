@@ -13,7 +13,7 @@ import org.maxhyperbeast.sklitebans.elements.events.EvtEntryAdded;
 public class CondEntryHasTemplate extends Condition {
 
     static {
-        Skript.registerCondition(CondEntryIsSilent.class, "%litebans entry% (1¦has|2¦does(n't| not) have) template");
+        Skript.registerCondition(CondEntryIsSilent.class, "%litebansentry% (1¦has|2¦does(n't| not) have) template");
     }
     Expression<Entry> entry;
 

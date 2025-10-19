@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 public class ClassInfos {
 
     static {
-        Classes.registerClass(new ClassInfo<>(Entry.class, "litebans entry")
+        Classes.registerClass(new ClassInfo<>(Entry.class, "litebansentry")
                 .user("litebans entr(y|ies)")
                 .name("Entry")
                 .description("Represents a LiteBans Entry, in simple terms it's the punishment itself")
