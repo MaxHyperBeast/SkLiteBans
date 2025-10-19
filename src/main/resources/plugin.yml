@@ -1,4 +1,9 @@
 name: SkLiteBans
+author: MaxHyperBeast
+description: 'Simple LiteBans Addon for Skript'
 version: '${project.version}'
 main: org.maxhyperbeast.sklitebans.SkLiteBans
-api-version: '1.21'
+api-version: '1.21.4'
+depend:
+  - LiteBans
+  - Skript

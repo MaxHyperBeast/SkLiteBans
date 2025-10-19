@@ -1,0 +1,38 @@
+package org.maxhyperbeast.sklitebans.elements.conditions;
+
+import ch.njol.skript.lang.Condition;
+import ch.njol.skript.lang.Expression;
+import ch.njol.skript.lang.SkriptParser;
+import ch.njol.util.Kleenean;
+import litebans.api.Entry;
+import org.bukkit.event.Event;
+import org.jetbrains.annotations.Nullable;
+import ch.njol.skript.Skript;
+import org.maxhyperbeast.sklitebans.elements.events.EvtEntryAdded;
+
+public class CondEntryIsPermanent extends Condition {
+
+    static {
+        Skript.registerCondition(CondEntryIsSilent.class, "%litebans entry% (1¦is|2¦is(n't| not)) permanent");
+    }
+    Expression<Entry> entry;
+
+    @Override
+    public boolean check(Event event) {
+        if (event instanceof EvtEntryAdded.EntryAddedEvent) {
+            return ((EvtEntryAdded.EntryAddedEvent) event).getEntry().isPermanent();
+        }
+        return false;
+    }
+
+    @Override
+    public String toString(@Nullable Event event, boolean b) {
+        return "Entry Is Permanent Condition";
+    }
+
+    @Override
+    public boolean init(Expression<?>[] expressions, int i, Kleenean kleenean, SkriptParser.ParseResult parseResult) {
+        entry = (Expression<Entry>) expressions[0];
+        return true;
+    }
+}
