@@ -1,6 +1,8 @@
 package org.maxhyperbeast.sklitebans.elements.expressions;
 
+import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Expression;
+import ch.njol.skript.lang.ExpressionType;
 import ch.njol.skript.lang.SkriptParser;
 import ch.njol.skript.lang.util.SimpleExpression;
 import ch.njol.util.Kleenean;
@@ -10,6 +12,9 @@ import org.jetbrains.annotations.Nullable;
 import org.maxhyperbeast.sklitebans.elements.events.EvtEntryAdded;
 
 public class ExprEntryExecutorUUID extends SimpleExpression<String> {
+    static {
+        Skript.registerExpression(ExprEntryExecutorUUID.class, String.class, ExpressionType.SIMPLE, "executor uuid of %litebansentry%", "uuid of executor of %litebansentry%", "%litebansentry%'s executor uuid");
+    }
     private Expression<Entry> entry;
     @Override
     protected String @Nullable [] get(Event event) {

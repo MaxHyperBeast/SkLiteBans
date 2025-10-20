@@ -1,6 +1,8 @@
 package org.maxhyperbeast.sklitebans.elements.expressions;
 
+import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Expression;
+import ch.njol.skript.lang.ExpressionType;
 import ch.njol.skript.lang.SkriptParser;
 import ch.njol.skript.lang.util.SimpleExpression;
 import ch.njol.util.Kleenean;
@@ -10,7 +12,9 @@ import org.jetbrains.annotations.Nullable;
 import org.maxhyperbeast.sklitebans.elements.events.EvtEntryAdded;
 
 public class ExprEntryDuration extends SimpleExpression<Long> {
-
+    static {
+        Skript.registerExpression(ExprEntryDuration.class, Long.class, ExpressionType.SIMPLE, "duration of %litebansentry%", "%litebansentry%'s duration");
+    }
     private Expression<Entry> entry;
     @Override
     protected Long @Nullable [] get(Event event) {
