@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b73f2760-57eb-4cad-8a90-c618b970ea88" name="Changes" comment="Fixed a few console errors for ClassInfos&#10;Discovered 3573857983 errors about variables in console related to SkLiteBans&#10;Will fix later">
+    <list default="true" id="b73f2760-57eb-4cad-8a90-c618b970ea88" name="Changes" comment="Fixed affects ip condition">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/conditions/CondEntryAffectsIP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/conditions/CondEntryAffectsIP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/conditions/CondEntryHasTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/conditions/CondEntryHasTemplate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/conditions/CondEntryIsActive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/conditions/CondEntryIsActive.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/conditions/CondEntryIsPermanent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/conditions/CondEntryIsPermanent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/conditions/CondEntryIsSilent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/conditions/CondEntryIsSilent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/ClassInfos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/ClassInfos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/original-sklitebans-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-sklitebans-1.0.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sklitebans-1.0.0-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/sklitebans-1.0.0-shaded.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sklitebans-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/sklitebans-1.0.0.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,13 +113,31 @@
       <option name="project" value="LOCAL" />
       <updated>1760913328181</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fixed Conditions">
+      <option name="closed" value="true" />
+      <created>1760975208142</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1760975208142</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fixed affects ip condition">
+      <option name="closed" value="true" />
+      <created>1760975450720</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1760975450720</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Added All of LitebansAPI to the addon except the Database part" />
     <MESSAGE value="Fixed a few console errors for ClassInfos&#10;Discovered 3573857983 errors about variables in console related to SkLiteBans&#10;Will fix later" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed a few console errors for ClassInfos&#10;Discovered 3573857983 errors about variables in console related to SkLiteBans&#10;Will fix later" />
+    <MESSAGE value="Fixed Conditions" />
+    <MESSAGE value="Fixed affects ip condition" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed affects ip condition" />
   </component>
 </project>
