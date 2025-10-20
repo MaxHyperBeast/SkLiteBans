@@ -4,27 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b73f2760-57eb-4cad-8a90-c618b970ea88" name="Changes" comment="Overrided parser in ClassInfos to fix errors">
+    <list default="true" id="b73f2760-57eb-4cad-8a90-c618b970ea88" name="Changes" comment="Fixed event errors regarding literals&#10;(I now know what that actually means)&#10;Moved LiteBans event registers into main class to prevent multiple listeners to be loaded">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryDateEnd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryDateEnd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryDateStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryDateStart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryDuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryDuration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryDurationString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryDurationString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryExecutorName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryExecutorName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryExecutorUUID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryExecutorUUID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryIP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryIP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryRandomID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryRandomID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryReason.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryReason.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryRemovalReason.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryRemovalReason.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryRemovedByName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryRemovedByName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryRemovedByUUID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryRemovedByUUID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryServerOrigin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryServerOrigin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryServerScope.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryServerScope.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryTemplateID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryTemplateID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryTemplateName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryTemplateName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryUUID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/expressions/ExprEntryUUID.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/SkLiteBans.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/SkLiteBans.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/events/EvtBroadcast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/events/EvtBroadcast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/events/EvtEntryAdded.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/events/EvtEntryAdded.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/events/EvtEntryRemoved.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maxhyperbeast/sklitebans/elements/events/EvtEntryRemoved.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/original-sklitebans-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-sklitebans-1.0.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sklitebans-1.0.0-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/sklitebans-1.0.0-shaded.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sklitebans-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/sklitebans-1.0.0.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760975828972</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added Syntax for all Expressions&#10;(Yes I forgot to add that)">
+      <option name="closed" value="true" />
+      <created>1760978280588</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1760978280588</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -162,6 +158,8 @@
     <MESSAGE value="Fixed Conditions" />
     <MESSAGE value="Fixed affects ip condition" />
     <MESSAGE value="Overrided parser in ClassInfos to fix errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Overrided parser in ClassInfos to fix errors" />
+    <MESSAGE value="Added Syntax for all Expressions&#10;(Yes I forgot to add that)" />
+    <MESSAGE value="Fixed event errors regarding literals&#10;(I now know what that actually means)&#10;Moved LiteBans event registers into main class to prevent multiple listeners to be loaded" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed event errors regarding literals&#10;(I now know what that actually means)&#10;Moved LiteBans event registers into main class to prevent multiple listeners to be loaded" />
   </component>
 </project>
