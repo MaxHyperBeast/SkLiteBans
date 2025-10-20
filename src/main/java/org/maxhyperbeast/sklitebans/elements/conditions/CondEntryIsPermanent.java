@@ -13,7 +13,7 @@ import org.maxhyperbeast.sklitebans.elements.events.EvtEntryAdded;
 public class CondEntryIsPermanent extends Condition {
 
     static {
-        Skript.registerCondition(CondEntryIsSilent.class, "%litebansentry% (1¦is|2¦is(n't| not)) permanent");
+        Skript.registerCondition(CondEntryIsSilent.class, "%litebansentry% is permanent", "%litebansentry% is(n't| not) permanent");
     }
     Expression<Entry> entry;
 
@@ -32,6 +32,7 @@ public class CondEntryIsPermanent extends Condition {
 
     @Override
     public boolean init(Expression<?>[] expressions, int i, Kleenean kleenean, SkriptParser.ParseResult parseResult) {
+        setNegated(i == 2);
         entry = (Expression<Entry>) expressions[0];
         return true;
     }

@@ -32,7 +32,7 @@ public class CondEntryAffectsIP extends Condition {
 
     @Override
     public boolean init(Expression<?>[] expressions, int i, Kleenean kleenean, SkriptParser.ParseResult parseResult) {
-        parseResult.
+        setNegated(i == 2);
         entry = (Expression<Entry>) expressions[0];
         return true;
     }
