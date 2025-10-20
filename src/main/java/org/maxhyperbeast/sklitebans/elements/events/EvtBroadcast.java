@@ -20,18 +20,8 @@ public class EvtBroadcast extends SkriptEvent {
         EventValues.registerEventValue(BroadcastEvent.class, String.class, BroadcastEvent::getMessage);
     }
 
-    Literal<String> permission;
-
     @Override
     public boolean init(Literal<?>[] literals, int i, SkriptParser.ParseResult parseResult) {
-        permission = (Literal<String>) literals[0];
-        Events.get().register(new Events.Listener() {
-            @Override
-            public void broadcastSent(String message, String type) {
-                BroadcastEvent event = new BroadcastEvent(message, type);
-                org.bukkit.Bukkit.getPluginManager().callEvent(event);
-            }
-        });
         return true;
     }
 

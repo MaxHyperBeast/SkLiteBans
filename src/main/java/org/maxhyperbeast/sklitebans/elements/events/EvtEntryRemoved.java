@@ -14,22 +14,12 @@ import org.jetbrains.annotations.Nullable;
 public class EvtEntryRemoved extends SkriptEvent {
 
     static {
-        Skript.registerEvent("LiteBans Entry Added", EvtEntryRemoved.class, EvtEntryRemoved.EntryRemovedEvent.class, "litebans entry removed");
+        Skript.registerEvent("LiteBans Entry Removed", EvtEntryRemoved.class, EvtEntryRemoved.EntryRemovedEvent.class, "litebans entry removed");
         EventValues.registerEventValue(EvtEntryRemoved.EntryRemovedEvent.class, Entry.class, EvtEntryRemoved.EntryRemovedEvent::getEntry);
     }
 
-    Literal<Entry> entry;
-
     @Override
     public boolean init(Literal<?>[] literals, int i, SkriptParser.ParseResult parseResult) {
-        entry = (Literal<Entry>) literals[0];
-        Events.get().register(new Events.Listener() {
-            @Override
-            public void entryAdded(Entry entry) {
-                EvtEntryRemoved.EntryRemovedEvent event = new EvtEntryRemoved.EntryRemovedEvent(entry);
-                org.bukkit.Bukkit.getPluginManager().callEvent(event);
-            }
-        });
         return true;
     }
 

@@ -1,6 +1,8 @@
 package org.maxhyperbeast.sklitebans.elements.expressions;
 
+import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Expression;
+import ch.njol.skript.lang.ExpressionType;
 import ch.njol.skript.lang.SkriptParser;
 import ch.njol.skript.lang.util.SimpleExpression;
 import ch.njol.util.Kleenean;
@@ -10,7 +12,9 @@ import org.jetbrains.annotations.Nullable;
 import org.maxhyperbeast.sklitebans.elements.events.EvtEntryAdded;
 
 public class ExprEntryDateEnd extends SimpleExpression<Long> {
-
+    static {
+        Skript.registerExpression(ExprEntryDateEnd.class, Long.class, ExpressionType.SIMPLE, "date end of %litebansentry%", "%litebansentry%'s date end");
+    }
     private Expression<Entry> entry;
     @Override
     protected Long @Nullable [] get(Event event) {

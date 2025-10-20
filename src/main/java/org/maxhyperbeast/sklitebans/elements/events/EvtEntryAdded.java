@@ -18,18 +18,9 @@ public class EvtEntryAdded extends SkriptEvent {
         EventValues.registerEventValue(EvtEntryAdded.EntryAddedEvent.class, Entry.class, EvtEntryAdded.EntryAddedEvent::getEntry);
     }
 
-    Literal<Entry> entry;
-
     @Override
     public boolean init(Literal<?>[] literals, int i, SkriptParser.ParseResult parseResult) {
-        entry = (Literal<Entry>) literals[0];
-        Events.get().register(new Events.Listener() {
-            @Override
-            public void entryAdded(Entry entry) {
-                EvtEntryAdded.EntryAddedEvent event = new EvtEntryAdded.EntryAddedEvent(entry);
-                org.bukkit.Bukkit.getPluginManager().callEvent(event);
-            }
-        });
+
         return true;
     }
 

@@ -1,6 +1,8 @@
 package org.maxhyperbeast.sklitebans.elements.expressions;
 
+        import ch.njol.skript.Skript;
         import ch.njol.skript.lang.Expression;
+        import ch.njol.skript.lang.ExpressionType;
         import ch.njol.skript.lang.SkriptParser;
         import ch.njol.skript.lang.util.SimpleExpression;
         import ch.njol.util.Kleenean;
@@ -10,6 +12,9 @@ package org.maxhyperbeast.sklitebans.elements.expressions;
         import org.maxhyperbeast.sklitebans.elements.events.EvtEntryAdded;
 
 public class ExprEntryRemovedByUUID extends SimpleExpression<String> {
+    static {
+        Skript.registerExpression(ExprEntryRemovedByUUID.class, String.class, ExpressionType.SIMPLE, "removed by uuid of %litebansentry%", "%litebansentry%'s removed by uuid");
+    }
     private Expression<Entry> entry;
     @Override
     protected String @Nullable [] get(Event event) {

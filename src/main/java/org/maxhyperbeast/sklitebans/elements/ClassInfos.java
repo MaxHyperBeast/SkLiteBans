@@ -6,8 +6,6 @@ import ch.njol.skript.expressions.base.EventValueExpression;
 import ch.njol.skript.lang.ParseContext;
 import ch.njol.skript.registrations.Classes;
 import litebans.api.Entry;
-import org.bukkit.Location;
-import org.bukkit.Raid;
 
 import javax.annotation.Nullable;
 
@@ -21,6 +19,16 @@ public class ClassInfos {
                 .examples("id of entry", "reason of entry", "type of entry")
                 .defaultExpression(new EventValueExpression<>(Entry.class))
                 .parser(new Parser<Entry>() {
+                    @Override
+                    @Nullable
+                    public Entry parse(String input, ParseContext context) {
+                        return null;
+                    }
+
+                    @Override
+                    public boolean canParse(ParseContext context) {
+                        return false;
+                    }
                     @Override
                     public String toString(Entry entry, int i) {
                         return "entry";

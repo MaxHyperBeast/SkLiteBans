@@ -1,9 +1,14 @@
 package org.maxhyperbeast.sklitebans;
 
+import litebans.api.Entry;
+import litebans.api.Events;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import ch.njol.skript.Skript;
 import ch.njol.skript.SkriptAddon;
+import org.maxhyperbeast.sklitebans.elements.events.EvtBroadcast;
+import org.maxhyperbeast.sklitebans.elements.events.EvtEntryAdded;
+import org.maxhyperbeast.sklitebans.elements.events.EvtEntryRemoved;
 
 import java.io.IOException;
 
@@ -31,11 +36,28 @@ public final class SkLiteBans extends JavaPlugin {
         try {
             addon.loadClasses("org.maxhyperbeast.sklitebans", "elements");
 
-            getLogger().info("Successfully registered SkLiteBans addon!");
         } catch (IOException e) {
             getLogger().severe("Failed to load SkLiteBans syntax: " + e.getMessage());
             getServer().getPluginManager().disablePlugin(this);
         }
+        Events.get().register(new Events.Listener() {
+            @Override
+            public void entryAdded(Entry entry) {
+                EvtEntryAdded.EntryAddedEvent event = new EvtEntryAdded.EntryAddedEvent(entry);
+                org.bukkit.Bukkit.getPluginManager().callEvent(event);
+            }
+            @Override
+            public void entryRemoved(Entry entry) {
+                EvtEntryRemoved.EntryRemovedEvent event = new EvtEntryRemoved.EntryRemovedEvent(entry);
+                org.bukkit.Bukkit.getPluginManager().callEvent(event);
+            }
+            @Override
+            public void broadcastSent(String message, String type) {
+                EvtBroadcast.BroadcastEvent event = new EvtBroadcast.BroadcastEvent(message, type);
+                org.bukkit.Bukkit.getPluginManager().callEvent(event);
+            }
+        });
+        getLogger().info("Successfully registered SkLiteBans addon!");
     }
 
     @Override
